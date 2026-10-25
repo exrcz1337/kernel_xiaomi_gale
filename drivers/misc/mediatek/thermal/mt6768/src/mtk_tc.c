@@ -237,7 +237,6 @@ mt_ptp_unlock(unsigned long *flags)
 int __attribute__ ((weak))
 get_wd_api(struct wd_api **obj)
 {
-	pr_notice("[Power/CPU_Thermal]%s doesn't exist\n", __func__);
 	return -1;
 }
 
@@ -1437,12 +1436,9 @@ void tscpu_config_all_tc_hw_protect(int temperature, int temperature2)
 	 * this API provide by Weiqi Fu(RGU SW owner).
 	 */
 	wd_api_ret = get_wd_api(&wd_api);
-	if (wd_api_ret >= 0) {
+	if (wd_api_ret >= 0 && wd_api) {
 		wd_api->wd_thermal_direct_mode_config(WD_REQ_DIS,
-					WD_REQ_RST_MODE);	/* reset mode */
-	} else {
-		tscpu_warn("%d FAILED TO GET WD API\n", __LINE__);
-		WARN_ON_ONCE(1);
+					WD_REQ_RST_MODE);
 	}
 #if THERMAL_PERFORMANCE_PROFILE
 	do_gettimeofday(&end);
@@ -1463,12 +1459,9 @@ void tscpu_config_all_tc_hw_protect(int temperature, int temperature2)
 	/*Thermal need to config to direct reset mode
 	 *  this API provide by Weiqi Fu(RGU SW owner).
 	 */
-	if (wd_api_ret >= 0) {
+	if (wd_api_ret >= 0 && wd_api) {
 		wd_api->wd_thermal_direct_mode_config(WD_REQ_EN,
-					WD_REQ_RST_MODE);	/* reset mode */
-	} else {
-		tscpu_warn("%d FAILED TO GET WD API\n", __LINE__);
-		WARN_ON_ONCE(1);
+					WD_REQ_RST_MODE);
 	}
 }
 
