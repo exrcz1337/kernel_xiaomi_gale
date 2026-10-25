@@ -267,12 +267,14 @@
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <2087500>;
 			regulator-enable-ramp-delay = <0>;
+			regulator-always-on;
 		};
 		mt_pmic_vcore_buck_reg: buck_vcore {
 			regulator-name = "vcore";
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1293750>;
 			regulator-enable-ramp-delay = <200>;
+			regulator-always-on;
 		};
 		mt_pmic_vpa_buck_reg: buck_vpa {
 			regulator-name = "vpa";
@@ -285,12 +287,14 @@
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1293750>;
 			regulator-enable-ramp-delay = <200>;
+			regulator-always-on;
 		};
 		mt_pmic_vproc12_buck_reg: buck_vproc12 {
 			regulator-name = "vproc12";
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1293750>;
 			regulator-enable-ramp-delay = <200>;
+			regulator-always-on;
 		};
 		mt_pmic_vgpu_buck_reg: buck_vgpu {
 			regulator-name = "vgpu";
@@ -303,18 +307,21 @@
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <2087500>;
 			regulator-enable-ramp-delay = <0>;
+			regulator-always-on;
 		};
 		mt_pmic_vmodem_buck_reg: buck_vmodem {
 			regulator-name = "vmodem";
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1293750>;
 			regulator-enable-ramp-delay = <900>;
+			regulator-always-on;
 		};
 		mt_pmic_vs1_buck_reg: buck_vs1 {
 			regulator-name = "vs1";
 			regulator-min-microvolt = <1000000>;
 			regulator-max-microvolt = <2587500>;
 			regulator-enable-ramp-delay = <0>;
+			regulator-always-on;
 		};
 
 		mt_pmic_vdram2_ldo_reg: ldo_vdram2 {
@@ -322,12 +329,14 @@
 			regulator-min-microvolt = <600000>;
 			regulator-max-microvolt = <1800000>;
 			regulator-enable-ramp-delay = <3300>;
+			regulator-always-on;
 		};
 		mt_pmic_vsim1_ldo_reg: ldo_vsim1 {
 			regulator-name = "vsim1";
 			regulator-min-microvolt = <1700000>;
 			regulator-max-microvolt = <3100000>;
 			regulator-enable-ramp-delay = <540>;
+			regulator-always-on;
 		};
 		mt_pmic_vibr_ldo_reg: ldo_vibr {
 			regulator-name = "vibr";
@@ -383,6 +392,7 @@
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1293750>;
 			regulator-enable-ramp-delay = <240>;
+			regulator-always-on;
 		};
 		mt_pmic_vcn28_ldo_reg: ldo_vcn28 {
 			regulator-name = "vcn28";
@@ -395,6 +405,7 @@
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1293750>;
 			regulator-enable-ramp-delay = <240>;
+			regulator-always-on;
 		};
 		mt_pmic_vsram_gpu_ldo_reg: ldo_vsram_gpu {
 			regulator-name = "vsram_gpu";
@@ -407,6 +418,7 @@
 			regulator-min-microvolt = <2200000>;
 			regulator-max-microvolt = <2200000>;
 			regulator-enable-ramp-delay = <120>;
+			regulator-always-on;
 		};
 		mt_pmic_vefuse_ldo_reg: ldo_vefuse {
 			regulator-name = "vefuse";
@@ -419,6 +431,7 @@
 			regulator-min-microvolt = <1800000>;
 			regulator-max-microvolt = <1800000>;
 			regulator-enable-ramp-delay = <270>;
+			regulator-always-on;
 		};
 		mt_pmic_vmch_ldo_reg: ldo_vmch {
 			regulator-name = "vmch";
@@ -431,12 +444,14 @@
 			regulator-min-microvolt = <2800000>;
 			regulator-max-microvolt = <2800000>;
 			regulator-enable-ramp-delay = <270>;
+			regulator-always-on;
 		};
 		mt_pmic_vsram_proc12_ldo_reg: ldo_vsram_proc12 {
 			regulator-name = "vsram_proc12";
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1293750>;
 			regulator-enable-ramp-delay = <240>;
+			regulator-always-on;
 		};
 		mt_pmic_vcama1_ldo_reg: ldo_vcama1 {
 			regulator-name = "vcama1";
@@ -503,12 +518,14 @@
 			regulator-min-microvolt = <2800000>;
 			regulator-max-microvolt = <2800000>;
 			regulator-enable-ramp-delay = <270>;
+			regulator-always-on;
 		};
 		mt_pmic_vsim2_ldo_reg: ldo_vsim2 {
 			regulator-name = "vsim2";
 			regulator-min-microvolt = <1700000>;
 			regulator-max-microvolt = <3100000>;
 			regulator-enable-ramp-delay = <540>;
+			regulator-always-on;
 		};
 		mt_pmic_va09_ldo_reg: ldo_va09 {
 			regulator-name = "va09";
@@ -516,6 +533,7 @@
 			regulator-max-microvolt = <900000>;
 			regulator-enable-ramp-delay = <264>;
 			regulator-boot-on;
+			regulator-always-on;
 		};
 	};	/* End of mt6358regulator */
 	mt6358_rtc: mt6358_rtc {
