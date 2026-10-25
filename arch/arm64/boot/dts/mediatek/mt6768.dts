@@ -1575,6 +1575,7 @@ page_owner=on loop.max_part=7";
 		sram_share_cnt = <1>;
 		sram_share_engine = <13>;
 		sram_share_event = <710>;
+		sram_size_cpr_64 = <64>;
 		mediatek,mailbox-gce = <&gce_mbox>;
 		secure_thread = <6 8>;
 		mboxes = <&gce_mbox 0 0 CMDQ_THR_PRIO_4>,
