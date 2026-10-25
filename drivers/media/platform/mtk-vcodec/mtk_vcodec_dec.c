@@ -2778,6 +2778,8 @@ static int mtk_vdec_s_ctrl(struct v4l2_ctrl *ctrl)
 	case V4L2_CID_MPEG_MTK_LOG:
 		mtk_vcodec_set_log(ctx, ctrl->p_new.p_char);
 		break;
+	case V4L2_CID_MPEG_MTK_INTERLACING:
+		break;
 	default:
 		mtk_v4l2_err("ctrl-id=%x not support!", ctrl->id);
 		return -EINVAL;
